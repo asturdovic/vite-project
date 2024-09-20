@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap');
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff; /* White background */
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #fffffa;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: 'Shrikhand', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #494949;
+}
+
+/* Header Section */
+.header-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat; /* Prevents image repeat */
+  width: 100vw;
+}
+
+
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.header-content h1 {
+  font-family: 'Shrikhand', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000000;
+  letter-spacing: 0.2em;
+}
+
+.header-content p {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.linkedin-logo {
+  width: 40px;
+  margin-top: 20px;
+  transition: transform 0.3s;
+}
+
+.linkedin-logo:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Skills Section */
+.skills-section {
+  padding: 50px 0;
+  background-color: #ffffff;
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skills-section h2 {
+  font-family: 'Shrikhand', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #000000;
+}
+
+.skills-grid {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15px;
+  flex-wrap: wrap;
+  width: 100vw;
+}
+
+.skill-item {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #000000;
+  border: 2px solid black;
+  font-size: 1.3rem;
+  color: #ffffff;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.skill-image {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+
+/* Projects Section */
+.projects-section {
+  padding: 50px 40px;
+  margin-bottom: 0; /* Ensure no margin at the bottom */
+  background-color: #ffffff;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+
+.projects-section h2 {
+  font-family: 'Shrikhand', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #000000;
+  text-align: center;
+}
+
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  width: 100%;
+  align-items: center;
+}
+
+.project-item {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.left-align .project-image {
+  order: 1;
+}
+
+.left-align .project-description {
+  order: 2;
+}
+
+.right-align .project-image {
+  order: 2;
+}
+
+.right-align .project-description {
+  order: 1;
+}
+
+/* Style for Project Section */
+.project-description {
+  max-width: 800px;
+  margin: 20px auto;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.8;
+  color: #333;
+  padding: 20px;
+}
+
+.project-description h3 {
+  font-family: 'Shrikhand', sans-serif;
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.project-description p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-align: justify;
+  color: #555;
+}
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-description {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .project-description h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-description ul li {
+    font-size: 1rem;
+  }
+}
+
+/* Slideshow Container */
+.slideshow-container {
+  position: relative;
+  width: 450px;
+  height: 300px;
+  margin: auto;
+}
+
+.slide-image, video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 10px;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.prev {
+  left: -30px;
+}
+
+.next {
+  right: -30px;
+}
+
+/* About and Contact Sections */
+.about-section,
+.contact-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    width: 100vw;
+    box-sizing: border-box;
+    margin-top: 0; /* Ensure no extra margin on top */
+    padding-top: 0;
+    
+  }
+
+  .contact-section {
+    font-family: 'shrikhand';
+  }
+
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.about-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.about-text h2 {
+  font-family: 'Shrikhand', sans-serif;
+  font-size: 2rem;
+  color: #000000;
+}
+
+.about-text p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  text-align: justify;
+  color: #555;
+  letter-spacing: 0.1rem;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 150%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.scroll-to-top:hover {
+  background-color: #ffffff;
+  color: black;
+}
+
+/* Contact Section */
+.contact-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-details {
+  font-family: 'Montserrat', sans-serif;
+  color: #555;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 20px auto;
+  line-height: 1.8; /* Adds space between lines */
+}
+
+.contact-email-wrapper {
+  margin-top: 20px; /* Adds space between the text and the email */
+}
+
+.contact-email {
+  font-family: 'Shrikhand', sans-serif;
+  color: #000;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: block; /* Makes sure the email is on its own line */
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-email:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+
+.combined-section {
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff; /* Make sure it has a consistent background */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+  /* Header Section */
+    .header-section {
+      background-size: cover; /* Adjust for smaller screens */
+      background-position: center;
+    }
+  
+  .header-content h1 {
+    font-size: 2rem; /* Smaller text for mobile */
+  }
+  
+  .header-content p {
+    font-size: 1.2rem; /* Adjust the paragraph size */
+  }
+
+
+  .linkedin-logo {
+    width: 30px; /* Smaller logo on mobile */
+  }
+
+  /* Skills Section */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 15px; /* Space between the grid items */
+    justify-items: center; /* Center items horizontally */
+  }
+
+  /* Adjust skill-item size */
+  .skill-item {
+    width: 100px; /* Adjust size for smaller screens */
+    height: 100px;
+  }
+
+  /* Adjust text size in skills */
+  .skill-item span {
+    font-size: 0.9rem;
+  }
+
+  .skill-image {
+    width: 40px; /* Smaller icons */
+    height: 40px;
+  }
+
+  /* Projects Section */
+  .projects-section {
+    padding: 20px 20px; /* Adjust padding for mobile */
+  }
+
+  .project-item {
+    flex-direction: column; /* Stack items vertically on mobile */
+    gap: 20px;
+  }
+
+  /* Added spacing between sections */
+  .project-description {
+    margin-bottom: 40px; /* Ensure enough space between project and about section */
+  }
+
+
+  .slideshow-container {
+    width: 100%; /* Full width on mobile */
+    height: auto;
+  }
+
+  .prev, .next {
+    top: 45%; /* Adjust button position on mobile */
+  }
+
+  /* About Section */
+  .about-content {
+    flex-direction: column; /* Stack image and text */
+    text-align: center; /* Center text on mobile */
+  }
+
+  
+  .about-text p {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem; /* Reduce font size */
+  }
+
+  .about-text p {
+    font-size: 1rem; /* Adjust text size */
+    padding: 0 20px;
+  }
+
+  .about-image img {
+    width: 100%; /* Full width image on mobile */
+  }
+
+  /* Contact Section */
+  .contact-section {
+    padding: 20px; /* Reduce padding on mobile */
+  }
+
+  .contact-details {
+    font-size: 1rem; /* Smaller text size */
+  }
+
+  .contact-email {
+    font-size: 1.2rem; /* Adjust size of email */
+    padding: 8px 16px; /* Smaller padding */
+  }
+}
+
